@@ -96,9 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				797E6A9126A7D8BC00C0DC78 /* VersatileApp.swift */,
-				797E6A9326A7D8BC00C0DC78 /* ContentView.swift */,
-				797E6A9526A7D8BD00C0DC78 /* Assets.xcassets */,
 				797E6A9A26A7D8BD00C0DC78 /* Info.plist */,
+				79D4E50B26A7D9F700279F1B /* Views */,
+				79D4E50A26A7D9CF00279F1B /* Resources */,
 				797E6A9726A7D8BD00C0DC78 /* Preview Content */,
 			);
 			path = Versatile;
@@ -128,6 +128,22 @@
 				797E6AB026A7D8BD00C0DC78 /* Info.plist */,
 			);
 			path = VersatileUITests;
+			sourceTree = "<group>";
+		};
+		79D4E50A26A7D9CF00279F1B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				797E6A9526A7D8BD00C0DC78 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		79D4E50B26A7D9F700279F1B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				797E6A9326A7D8BC00C0DC78 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
