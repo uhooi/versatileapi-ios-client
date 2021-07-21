@@ -24,7 +24,7 @@ jobs:
 
       - name: Xcode build
         run: set -o pipefail \
-             && xcodebuild \
+             xcodebuild \
              -sdk iphonesimulator \
              -configuration Debug \
              -project Versatile.xcodeproj \
