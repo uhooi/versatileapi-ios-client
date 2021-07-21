@@ -1,5 +1,6 @@
 # versatileapi-ios-client
 
+[![CI](https://github.com/uhooi/versatileapi-ios-client/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/uhooi/versatileapi-ios-client/actions/workflows/main.yml)
 [![Release](https://img.shields.io/github/v/release/uhooi/versatileapi-ios-client)](https://github.com/uhooi/versatileapi-ios-client/releases/latest)
 [![License](https://img.shields.io/github/license/uhooi/versatileapi-ios-client)](https://github.com/uhooi/versatileapi-ios-client/blob/main/LICENSE)
 [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey)](https://github.com/uhooi/versatileapi-ios-client)
