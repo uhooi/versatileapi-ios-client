@@ -5,6 +5,6 @@
 //  Created by uhooi on 2021/07/25.
 //
 
-struct TweetID: Decodable {
+struct TweetID: Decodable, Equatable {
     let id: String
 }

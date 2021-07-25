@@ -29,6 +29,7 @@
 		79F24DFA26AD77AE00ACDBE2 /* TweetID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F24DF926AD77AE00ACDBE2 /* TweetID.swift */; };
 		79F24DFC26AD803A00ACDBE2 /* FetchTweetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F24DFB26AD803A00ACDBE2 /* FetchTweetRequest.swift */; };
 		79F24DFE26AD81BE00ACDBE2 /* FetchAllTweetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F24DFD26AD81BE00ACDBE2 /* FetchAllTweetRequest.swift */; };
+		79F24E0626AD82CF00ACDBE2 /* VersatileAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F24E0526AD82CF00ACDBE2 /* VersatileAPIClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,13 @@
 			remoteInfo = Versatile;
 		};
 		797E6AAB26A7D8BD00C0DC78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 797E6A8626A7D8BC00C0DC78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 797E6A8D26A7D8BC00C0DC78;
+			remoteInfo = Versatile;
+		};
+		79F24E0826AD82CF00ACDBE2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 797E6A8626A7D8BC00C0DC78 /* Project object */;
 			proxyType = 1;
@@ -77,6 +85,9 @@
 		79F24DF926AD77AE00ACDBE2 /* TweetID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetID.swift; sourceTree = "<group>"; };
 		79F24DFB26AD803A00ACDBE2 /* FetchTweetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTweetRequest.swift; sourceTree = "<group>"; };
 		79F24DFD26AD81BE00ACDBE2 /* FetchAllTweetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAllTweetRequest.swift; sourceTree = "<group>"; };
+		79F24E0326AD82CF00ACDBE2 /* VersatileIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VersatileIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F24E0526AD82CF00ACDBE2 /* VersatileAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersatileAPIClientTests.swift; sourceTree = "<group>"; };
+		79F24E0726AD82CF00ACDBE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +106,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		797E6AA726A7D8BD00C0DC78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F24E0026AD82CF00ACDBE2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,6 +146,7 @@
 			children = (
 				797E6A9026A7D8BC00C0DC78 /* Versatile */,
 				797E6AA226A7D8BD00C0DC78 /* VersatileTests */,
+				79F24E0426AD82CF00ACDBE2 /* VersatileIntegrationTests */,
 				797E6AAD26A7D8BD00C0DC78 /* VersatileUITests */,
 				797E6A8F26A7D8BC00C0DC78 /* Products */,
 			);
@@ -139,6 +158,7 @@
 				797E6A8E26A7D8BC00C0DC78 /* Versatile.app */,
 				797E6A9F26A7D8BD00C0DC78 /* VersatileTests.xctest */,
 				797E6AAA26A7D8BD00C0DC78 /* VersatileUITests.xctest */,
+				79F24E0326AD82CF00ACDBE2 /* VersatileIntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,6 +262,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		79F24E0426AD82CF00ACDBE2 /* VersatileIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				79F24E0526AD82CF00ACDBE2 /* VersatileAPIClientTests.swift */,
+				79F24E0726AD82CF00ACDBE2 /* Info.plist */,
+			);
+			path = VersatileIntegrationTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -298,6 +327,24 @@
 			productReference = 797E6AAA26A7D8BD00C0DC78 /* VersatileUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		79F24E0226AD82CF00ACDBE2 /* VersatileIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79F24E0A26AD82CF00ACDBE2 /* Build configuration list for PBXNativeTarget "VersatileIntegrationTests" */;
+			buildPhases = (
+				79F24DFF26AD82CF00ACDBE2 /* Sources */,
+				79F24E0026AD82CF00ACDBE2 /* Frameworks */,
+				79F24E0126AD82CF00ACDBE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79F24E0926AD82CF00ACDBE2 /* PBXTargetDependency */,
+			);
+			name = VersatileIntegrationTests;
+			productName = VersatileIntegrationTests;
+			productReference = 79F24E0326AD82CF00ACDBE2 /* VersatileIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -318,6 +365,10 @@
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = 797E6A8D26A7D8BC00C0DC78;
 					};
+					79F24E0226AD82CF00ACDBE2 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 797E6A8D26A7D8BC00C0DC78;
+					};
 				};
 			};
 			buildConfigurationList = 797E6A8926A7D8BC00C0DC78 /* Build configuration list for PBXProject "Versatile" */;
@@ -335,6 +386,7 @@
 			targets = (
 				797E6A8D26A7D8BC00C0DC78 /* Versatile */,
 				797E6A9E26A7D8BD00C0DC78 /* VersatileTests */,
+				79F24E0226AD82CF00ACDBE2 /* VersatileIntegrationTests */,
 				797E6AA926A7D8BD00C0DC78 /* VersatileUITests */,
 			);
 		};
@@ -358,6 +410,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		797E6AA826A7D8BD00C0DC78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F24E0126AD82CF00ACDBE2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,6 +467,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79F24DFF26AD82CF00ACDBE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F24E0626AD82CF00ACDBE2 /* VersatileAPIClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -420,6 +487,11 @@
 			isa = PBXTargetDependency;
 			target = 797E6A8D26A7D8BC00C0DC78 /* Versatile */;
 			targetProxy = 797E6AAB26A7D8BD00C0DC78 /* PBXContainerItemProxy */;
+		};
+		79F24E0926AD82CF00ACDBE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 797E6A8D26A7D8BC00C0DC78 /* Versatile */;
+			targetProxy = 79F24E0826AD82CF00ACDBE2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -662,6 +734,44 @@
 			};
 			name = Release;
 		};
+		79F24E0B26AD82CF00ACDBE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VersatileIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.theuhooi.VersatileIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Versatile.app/Versatile";
+			};
+			name = Debug;
+		};
+		79F24E0C26AD82CF00ACDBE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VersatileIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.theuhooi.VersatileIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Versatile.app/Versatile";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -697,6 +807,15 @@
 			buildConfigurations = (
 				797E6ABA26A7D8BD00C0DC78 /* Debug */,
 				797E6ABB26A7D8BD00C0DC78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79F24E0A26AD82CF00ACDBE2 /* Build configuration list for PBXNativeTarget "VersatileIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79F24E0B26AD82CF00ACDBE2 /* Debug */,
+				79F24E0C26AD82CF00ACDBE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
