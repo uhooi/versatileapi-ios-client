@@ -6,11 +6,11 @@
 //
 
 protocol VersatileRepository {
-    func registerUser(_ user: User, completion: Result<Void, Error>)
-    func updateUser(_ user: User, completion: Result<Void, Error>)
-    func fetchUser(_ userId: String, completion: Result<User, Error>)
-    func fetchAllUser(_ completion: Result<[User], Error>)
-    func tweet(_ tweet: Tweet, completion: Result<Void, Error>)
-    func FetchTweet(_ tweetId: String, completion: Result<Tweet, Error>)
-    func FetchAllTweet(_ completion: Result<[Tweet], Error>)
+    func registerUser(_ user: User, completion: @escaping (Result<UserID, Error>) -> Void)
+    func updateUser(_ user: User, completion: @escaping (Result<UserID, Error>) -> Void)
+    func fetchUser(_ userID: String, completion: @escaping (Result<User, Error>) -> Void)
+    func fetchAllUser(_ completion: @escaping (Result<[User], Error>) -> Void)
+    func tweet(_ tweet: Tweet, completion: @escaping (Result<TweetID, Error>) -> Void)
+    func fetchTweet(_ tweetID: String, completion: @escaping (Result<Tweet, Error>) -> Void)
+    func fetchAllTweet(_ completion: @escaping (Result<[Tweet], Error>) -> Void)
 }
