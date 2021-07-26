@@ -58,13 +58,13 @@ final class APIClient {
                 completion(.failure(RequestError.redirection))
                 return
             case 400..<500:
-                completion(.failure(RequestError.clientError))
+                completion(.failure(RequestError.clientError(response.statusCode)))
                 return
             case 500..<600:
-                completion(.failure(RequestError.serverError))
+                completion(.failure(RequestError.serverError(response.statusCode)))
                 return
             default:
-                completion(.failure(RequestError.invalidStatusCode))
+                completion(.failure(RequestError.invalidStatusCode(response.statusCode)))
                 return
             }
             guard let data = data else {
@@ -87,8 +87,8 @@ enum RequestError: Error {
     case invalidUrl
     case invalidData
     case invalidResponse
-    case clientError
-    case serverError
-    case invalidStatusCode
+    case clientError(_ statusCode: Int)
+    case serverError(_ statusCode: Int)
+    case invalidStatusCode(_ statusCode: Int)
     case redirection
 }
