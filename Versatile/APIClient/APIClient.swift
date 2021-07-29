@@ -11,18 +11,18 @@ final class APIClient {
     
     // MARK: Stored Instance Properties
     
-    private let baseUrlString: String
+    private let baseURLString: String
     
     // MARK: Initializers
     
-    init(baseUrlString: String) {
-        self.baseUrlString = baseUrlString
+    init(baseURLString: String) {
+        self.baseURLString = baseURLString
     }
     
     // MARK: Other Internal Methods
     
     func request<T: Request>(_ requestContents: T, completion: @escaping (Result<T.ResponseBody, Error>) -> Void) {
-        guard let url = URL(string: baseUrlString + requestContents.path),
+        guard let url = URL(string: baseURLString + requestContents.path),
               var components = URLComponents(url: url, resolvingAgainstBaseURL: url.baseURL != nil)
         else {
             completion(.failure(RequestError.invalidUrl))

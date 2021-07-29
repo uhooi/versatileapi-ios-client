@@ -8,7 +8,7 @@
 final class VersatileAPIClient {
     static let shared = VersatileAPIClient()
     
-    private let apiClient = APIClient(baseUrlString: "https://versatileapi.herokuapp.com/api/")
+    private let apiClient = APIClient(baseURLString: "https://versatileapi.herokuapp.com/api/")
 }
 
 extension VersatileAPIClient: VersatileRepository {
