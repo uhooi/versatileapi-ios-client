@@ -10,9 +10,6 @@ import Combine
 
 struct UserView: View {
     @ObservedObject var viewModel: UserViewModel
-    @State var isActiveTimelineView = false
-    
-    private let disposables = Set<AnyCancellable>()
     
     init(viewModel: UserViewModel) {
         self.viewModel = viewModel
@@ -22,7 +19,7 @@ struct UserView: View {
         VStack {
             NavigationLink(
                 destination: TimelineView(),
-                isActive: $isActiveTimelineView) {
+                isActive: $viewModel.willNavigateToTimeline) {
                 EmptyView()
             }
             Text("ユーザー登録")

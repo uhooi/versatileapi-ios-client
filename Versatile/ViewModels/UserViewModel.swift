@@ -10,14 +10,12 @@ import Combine
 final class UserViewModel: ObservableObject, Identifiable {
     @Published var name: String = ""
     @Published var description: String = ""
+    @Published var willNavigateToTimeline = false
     
     private var disposables = Set<AnyCancellable>()
     
     // input
     let buttonTapped = PassthroughSubject<Void, Never>()
-    
-    // output
-    let navigateToTimeline = PassthroughSubject<Void, Never>()
     
     init(apiClient: VersatileRepository) {
         buttonTapped.sink(receiveValue: { _ in
@@ -25,7 +23,7 @@ final class UserViewModel: ObservableObject, Identifiable {
                 switch result {
                 case .success:
                     // TODO: Idをローカルに保存
-                    self.navigateToTimeline.send(())
+                    self.willNavigateToTimeline = true
                     break
                 case .failure:
                     // TODO: 失敗を画面に通知

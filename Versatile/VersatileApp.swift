@@ -11,7 +11,9 @@ import SwiftUI
 struct VersatileApp: App {
     var body: some Scene {
         WindowGroup {
-            UserView(viewModel: UserViewModel(apiClient: VersatileAPIClientMock()))
+            NavigationView {
+                UserView(viewModel: UserViewModel(apiClient: VersatileAPIClientMock()))
+            }
         }
     }
 }
