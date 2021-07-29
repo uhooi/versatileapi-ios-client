@@ -18,7 +18,7 @@ struct UserView: View {
     var body: some View {
         VStack {
             NavigationLink(
-                destination: TimelineView(),
+                destination: TimelineView(viewModel: TimelineViewModel(apiClient: VersatileAPIClientMock())),
                 isActive: $viewModel.willNavigateToTimeline) {
                 EmptyView()
             }

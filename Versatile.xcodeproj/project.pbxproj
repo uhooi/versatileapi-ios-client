@@ -11,6 +11,8 @@
 		50F4130326B268590068C47B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4130226B268590068C47B /* UserViewModel.swift */; };
 		50F4130526B2937D0068C47B /* VersatileAPIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4130426B2937D0068C47B /* VersatileAPIClientMock.swift */; };
 		50F4130726B2ADA20068C47B /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4130626B2ADA20068C47B /* TimelineView.swift */; };
+		50F4130926B2BAEC0068C47B /* TimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4130826B2BAEC0068C47B /* TimelineViewModel.swift */; };
+		50F4130B26B2C0160068C47B /* TimelineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4130A26B2C0160068C47B /* TimelineRow.swift */; };
 		7919CB0026A8453B00B20043 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919CAFF26A8453B00B20043 /* User.swift */; };
 		7919CB0226A84D3200B20043 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919CB0126A84D3200B20043 /* Tweet.swift */; };
 		7919CB0526A84F6600B20043 /* VersatileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919CB0426A84F6600B20043 /* VersatileRepository.swift */; };
@@ -64,6 +66,8 @@
 		50F4130226B268590068C47B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		50F4130426B2937D0068C47B /* VersatileAPIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersatileAPIClientMock.swift; sourceTree = "<group>"; };
 		50F4130626B2ADA20068C47B /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		50F4130826B2BAEC0068C47B /* TimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewModel.swift; sourceTree = "<group>"; };
+		50F4130A26B2C0160068C47B /* TimelineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRow.swift; sourceTree = "<group>"; };
 		7919CAFF26A8453B00B20043 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7919CB0126A84D3200B20043 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		7919CB0426A84F6600B20043 /* VersatileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersatileRepository.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				50F4130226B268590068C47B /* UserViewModel.swift */,
+				50F4130826B2BAEC0068C47B /* TimelineViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 			children = (
 				50F412FF26B263760068C47B /* UserView.swift */,
 				50F4130626B2ADA20068C47B /* TimelineView.swift */,
+				50F4130A26B2C0160068C47B /* TimelineRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -456,6 +462,7 @@
 				79F24DFE26AD81BE00ACDBE2 /* FetchAllTweetRequest.swift in Sources */,
 				7919CB0926A8519D00B20043 /* APIClient.swift in Sources */,
 				797E6A9226A7D8BC00C0DC78 /* VersatileApp.swift in Sources */,
+				50F4130B26B2C0160068C47B /* TimelineRow.swift in Sources */,
 				7919CB0026A8453B00B20043 /* User.swift in Sources */,
 				79F24DED26AD6AC300ACDBE2 /* Encodable+Data.swift in Sources */,
 				79F24DEF26AD6E3A00ACDBE2 /* UpdateUserRequest.swift in Sources */,
@@ -464,6 +471,7 @@
 				50F4130326B268590068C47B /* UserViewModel.swift in Sources */,
 				7919CB0726A84FCA00B20043 /* VersatileAPIClient.swift in Sources */,
 				79F24DEA26AD594200ACDBE2 /* RegisterUserRequest.swift in Sources */,
+				50F4130926B2BAEC0068C47B /* TimelineViewModel.swift in Sources */,
 				79F24DF626AD764000ACDBE2 /* FetchAllUserRequest.swift in Sources */,
 				7919CB0526A84F6600B20043 /* VersatileRepository.swift in Sources */,
 				79F24DFA26AD77AE00ACDBE2 /* TweetID.swift in Sources */,

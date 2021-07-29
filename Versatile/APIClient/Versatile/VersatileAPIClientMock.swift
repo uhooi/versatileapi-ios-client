@@ -17,6 +17,28 @@ final class VersatileAPIClientMock {
         User(id: "002", name: "Second Hanako", description: "Nice to meet you."),
         User(id: "003", name: "Third sado", description: "Kennenzulernen")
     ]
+    private var tweets = [
+        Tweet(id: "001", text: "テスト投稿", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "002", text: "暇なう", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "003", text: "長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "004", text: "おはよ", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "005", text: "こんにちは", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "006", text: "こんばんは", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "007", text: "ねむい", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "008", text: "あ", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "009", text: "うーん", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "010", text: "えー", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "011", text: "テスト投稿", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "012", text: "暇なう", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "013", text: "長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "014", text: "おはよ", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "015", text: "こんにちは", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "016", text: "こんばんは", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "017", text: "ねむい", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "018", text: "あ", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "019", text: "うーん", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+        Tweet(id: "020", text: "えー", in_reply_to_user_id: nil, in_reply_to_text_id: nil),
+    ]
 }
 
 extension VersatileAPIClientMock: VersatileRepository {
@@ -52,6 +74,7 @@ extension VersatileAPIClientMock: VersatileRepository {
     }
     
     func fetchAllTweet(_ completion: @escaping (Result<[Tweet], Error>) -> Void) {
+        completion(.success(tweets))
     }
     
 }
