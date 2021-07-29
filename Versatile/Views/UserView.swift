@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import Combine
 
 struct UserView: View {
     @ObservedObject var viewModel: UserViewModel
+    @State var isActiveTimelineView = false
+    
+    private let disposables = Set<AnyCancellable>()
     
     init(viewModel: UserViewModel) {
         self.viewModel = viewModel
@@ -16,6 +20,11 @@ struct UserView: View {
     
     var body: some View {
         VStack {
+            NavigationLink(
+                destination: TimelineView(),
+                isActive: $isActiveTimelineView) {
+                EmptyView()
+            }
             Text("ユーザー登録")
                 .padding(EdgeInsets(top: 100, leading: 0, bottom: 100, trailing: 0))
                 .font(.title)
@@ -28,7 +37,9 @@ struct UserView: View {
                 .lineLimit(10)
             .frame(maxHeight: 300)
             Spacer()
-            Button("登録", action: {})
+            Button("登録", action: {
+                viewModel.buttonTapped.send()
+            })
         }
         .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
     }
@@ -36,6 +47,6 @@ struct UserView: View {
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-        UserView(viewModel: UserViewModel())
+        UserView(viewModel: UserViewModel(apiClient: VersatileAPIClientMock()))
     }
 }

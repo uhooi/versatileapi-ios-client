@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		50F4130026B263760068C47B /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F412FF26B263760068C47B /* UserView.swift */; };
 		50F4130326B268590068C47B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4130226B268590068C47B /* UserViewModel.swift */; };
+		50F4130526B2937D0068C47B /* VersatileAPIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4130426B2937D0068C47B /* VersatileAPIClientMock.swift */; };
+		50F4130726B2ADA20068C47B /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4130626B2ADA20068C47B /* TimelineView.swift */; };
 		7919CB0026A8453B00B20043 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919CAFF26A8453B00B20043 /* User.swift */; };
 		7919CB0226A84D3200B20043 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919CB0126A84D3200B20043 /* Tweet.swift */; };
 		7919CB0526A84F6600B20043 /* VersatileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919CB0426A84F6600B20043 /* VersatileRepository.swift */; };
@@ -60,6 +62,8 @@
 /* Begin PBXFileReference section */
 		50F412FF26B263760068C47B /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		50F4130226B268590068C47B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		50F4130426B2937D0068C47B /* VersatileAPIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersatileAPIClientMock.swift; sourceTree = "<group>"; };
+		50F4130626B2ADA20068C47B /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		7919CAFF26A8453B00B20043 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7919CB0126A84D3200B20043 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		7919CB0426A84F6600B20043 /* VersatileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersatileRepository.swift; sourceTree = "<group>"; };
@@ -228,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				50F412FF26B263760068C47B /* UserView.swift */,
+				50F4130626B2ADA20068C47B /* TimelineView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 			children = (
 				79F24DE826AD590200ACDBE2 /* Requests */,
 				7919CB0626A84FCA00B20043 /* VersatileAPIClient.swift */,
+				50F4130426B2937D0068C47B /* VersatileAPIClientMock.swift */,
 			);
 			path = Versatile;
 			sourceTree = "<group>";
@@ -442,6 +448,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				79F24DFC26AD803A00ACDBE2 /* FetchTweetRequest.swift in Sources */,
+				50F4130726B2ADA20068C47B /* TimelineView.swift in Sources */,
+				50F4130526B2937D0068C47B /* VersatileAPIClientMock.swift in Sources */,
 				79F24DE526AD38A400ACDBE2 /* Request.swift in Sources */,
 				50F4130026B263760068C47B /* UserView.swift in Sources */,
 				79F24DF426AD72D800ACDBE2 /* FetchUserRequest.swift in Sources */,
