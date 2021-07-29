@@ -18,6 +18,9 @@
 		797E6A9926A7D8BD00C0DC78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 797E6A9826A7D8BD00C0DC78 /* Preview Assets.xcassets */; };
 		797E6AA426A7D8BD00C0DC78 /* VersatileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E6AA326A7D8BD00C0DC78 /* VersatileTests.swift */; };
 		797E6AAF26A7D8BD00C0DC78 /* VersatileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E6AAE26A7D8BD00C0DC78 /* VersatileUITests.swift */; };
+		79804F8726B2E625002C375F /* RegisterUserRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79804F8626B2E625002C375F /* RegisterUserRequestBody.swift */; };
+		79804F8B26B2E766002C375F /* UpdateUserRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79804F8A26B2E766002C375F /* UpdateUserRequestBody.swift */; };
+		79804F8E26B2E83D002C375F /* TweetRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79804F8D26B2E83D002C375F /* TweetRequestBody.swift */; };
 		79F24DE526AD38A400ACDBE2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F24DE426AD38A400ACDBE2 /* Request.swift */; };
 		79F24DEA26AD594200ACDBE2 /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F24DE926AD594200ACDBE2 /* RegisterUserRequest.swift */; };
 		79F24DED26AD6AC300ACDBE2 /* Encodable+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F24DEC26AD6AC300ACDBE2 /* Encodable+Data.swift */; };
@@ -74,6 +77,9 @@
 		797E6AAA26A7D8BD00C0DC78 /* VersatileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VersatileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		797E6AAE26A7D8BD00C0DC78 /* VersatileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersatileUITests.swift; sourceTree = "<group>"; };
 		797E6AB026A7D8BD00C0DC78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79804F8626B2E625002C375F /* RegisterUserRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequestBody.swift; sourceTree = "<group>"; };
+		79804F8A26B2E766002C375F /* UpdateUserRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserRequestBody.swift; sourceTree = "<group>"; };
+		79804F8D26B2E83D002C375F /* TweetRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRequestBody.swift; sourceTree = "<group>"; };
 		79F24DE426AD38A400ACDBE2 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		79F24DE926AD594200ACDBE2 /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
 		79F24DEC26AD6AC300ACDBE2 /* Encodable+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Data.swift"; sourceTree = "<group>"; };
@@ -205,6 +211,65 @@
 			path = VersatileUITests;
 			sourceTree = "<group>";
 		};
+		79804F8826B2E6EF002C375F /* RegisterUser */ = {
+			isa = PBXGroup;
+			children = (
+				79F24DE926AD594200ACDBE2 /* RegisterUserRequest.swift */,
+				79804F8626B2E625002C375F /* RegisterUserRequestBody.swift */,
+			);
+			path = RegisterUser;
+			sourceTree = "<group>";
+		};
+		79804F8926B2E731002C375F /* UpdateUser */ = {
+			isa = PBXGroup;
+			children = (
+				79F24DEE26AD6E3A00ACDBE2 /* UpdateUserRequest.swift */,
+				79804F8A26B2E766002C375F /* UpdateUserRequestBody.swift */,
+			);
+			path = UpdateUser;
+			sourceTree = "<group>";
+		};
+		79804F8C26B2E823002C375F /* Tweet */ = {
+			isa = PBXGroup;
+			children = (
+				79F24DF726AD776D00ACDBE2 /* TweetRequest.swift */,
+				79804F8D26B2E83D002C375F /* TweetRequestBody.swift */,
+			);
+			path = Tweet;
+			sourceTree = "<group>";
+		};
+		79804F8F26B2E8DE002C375F /* FetchUser */ = {
+			isa = PBXGroup;
+			children = (
+				79F24DF326AD72D800ACDBE2 /* FetchUserRequest.swift */,
+			);
+			path = FetchUser;
+			sourceTree = "<group>";
+		};
+		79804F9026B2E950002C375F /* FetchAllUser */ = {
+			isa = PBXGroup;
+			children = (
+				79F24DF526AD764000ACDBE2 /* FetchAllUserRequest.swift */,
+			);
+			path = FetchAllUser;
+			sourceTree = "<group>";
+		};
+		79804F9126B2E9B2002C375F /* FetchTweet */ = {
+			isa = PBXGroup;
+			children = (
+				79F24DFB26AD803A00ACDBE2 /* FetchTweetRequest.swift */,
+			);
+			path = FetchTweet;
+			sourceTree = "<group>";
+		};
+		79804F9226B2E9BF002C375F /* FetchAllTweet */ = {
+			isa = PBXGroup;
+			children = (
+				79F24DFD26AD81BE00ACDBE2 /* FetchAllTweetRequest.swift */,
+			);
+			path = FetchAllTweet;
+			sourceTree = "<group>";
+		};
 		79D4E50A26A7D9CF00279F1B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,8 +299,8 @@
 		79F24DE726AD553A00ACDBE2 /* Versatile */ = {
 			isa = PBXGroup;
 			children = (
-				79F24DE826AD590200ACDBE2 /* Requests */,
 				7919CB0626A84FCA00B20043 /* VersatileAPIClient.swift */,
+				79F24DE826AD590200ACDBE2 /* Requests */,
 			);
 			path = Versatile;
 			sourceTree = "<group>";
@@ -243,13 +308,13 @@
 		79F24DE826AD590200ACDBE2 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				79F24DE926AD594200ACDBE2 /* RegisterUserRequest.swift */,
-				79F24DEE26AD6E3A00ACDBE2 /* UpdateUserRequest.swift */,
-				79F24DF326AD72D800ACDBE2 /* FetchUserRequest.swift */,
-				79F24DF526AD764000ACDBE2 /* FetchAllUserRequest.swift */,
-				79F24DF726AD776D00ACDBE2 /* TweetRequest.swift */,
-				79F24DFB26AD803A00ACDBE2 /* FetchTweetRequest.swift */,
-				79F24DFD26AD81BE00ACDBE2 /* FetchAllTweetRequest.swift */,
+				79804F8826B2E6EF002C375F /* RegisterUser */,
+				79804F8926B2E731002C375F /* UpdateUser */,
+				79804F8F26B2E8DE002C375F /* FetchUser */,
+				79804F9026B2E950002C375F /* FetchAllUser */,
+				79804F8C26B2E823002C375F /* Tweet */,
+				79804F9126B2E9B2002C375F /* FetchTweet */,
+				79804F9226B2E9BF002C375F /* FetchAllTweet */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -433,9 +498,12 @@
 				79F24DFC26AD803A00ACDBE2 /* FetchTweetRequest.swift in Sources */,
 				797E6A9426A7D8BC00C0DC78 /* ContentView.swift in Sources */,
 				79F24DE526AD38A400ACDBE2 /* Request.swift in Sources */,
+				79804F8B26B2E766002C375F /* UpdateUserRequestBody.swift in Sources */,
 				79F24DF426AD72D800ACDBE2 /* FetchUserRequest.swift in Sources */,
+				79804F8726B2E625002C375F /* RegisterUserRequestBody.swift in Sources */,
 				79F24DFE26AD81BE00ACDBE2 /* FetchAllTweetRequest.swift in Sources */,
 				7919CB0926A8519D00B20043 /* APIClient.swift in Sources */,
+				79804F8E26B2E83D002C375F /* TweetRequestBody.swift in Sources */,
 				797E6A9226A7D8BC00C0DC78 /* VersatileApp.swift in Sources */,
 				7919CB0026A8453B00B20043 /* User.swift in Sources */,
 				79F24DED26AD6AC300ACDBE2 /* Encodable+Data.swift in Sources */,

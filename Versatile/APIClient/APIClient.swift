@@ -72,7 +72,9 @@ final class APIClient {
                 return
             }
             do {
-                let responseBody = try JSONDecoder().decode(T.ResponseBody.self, from: data)
+                let jsonDecoder = JSONDecoder()
+                jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+                let responseBody = try jsonDecoder.decode(T.ResponseBody.self, from: data)
                 completion(.success(responseBody))
                 return
             } catch let error {

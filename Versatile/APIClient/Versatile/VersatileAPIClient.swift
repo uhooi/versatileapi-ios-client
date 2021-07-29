@@ -12,15 +12,17 @@ final class VersatileAPIClient {
 }
 
 extension VersatileAPIClient: VersatileRepository {
-    func registerUser(_ user: User, completion: @escaping (Result<UserID, Error>) -> Void) {
-        apiClient.request(RegisterUserRequest(requestBody: user), completion: completion)
+    func registerUser(name: String, description: String, completion: @escaping (Result<UserID, Error>) -> Void) {
+        let requestBody = RegisterUserRequestBody(name: name, description: description)
+        apiClient.request(RegisterUserRequest(requestBody: requestBody), completion: completion)
     }
     
-    func updateUser(_ user: User, completion: @escaping (Result<UserID, Error>) -> Void) {
-        apiClient.request(UpdateUserRequest(requestBody: user), completion: completion)
+    func updateUser(name: String, description: String, completion: @escaping (Result<UserID, Error>) -> Void) {
+        let requestBody = UpdateUserRequestBody(name: name, description: description)
+        apiClient.request(UpdateUserRequest(requestBody: requestBody), completion: completion)
     }
     
-    func fetchUser(_ userID: String, completion: @escaping (Result<User, Error>) -> Void) {
+    func fetchUser(userID: String, completion: @escaping (Result<User, Error>) -> Void) {
         apiClient.request(FetchUserRequest(userID: userID), completion: completion)
     }
     
@@ -28,11 +30,12 @@ extension VersatileAPIClient: VersatileRepository {
         apiClient.request(FetchAllUserRequest(), completion: completion)
     }
     
-    func tweet(_ tweet: Tweet, completion: @escaping (Result<TweetID, Error>) -> Void) {
-        apiClient.request(TweetRequest(requestBody: tweet), completion: completion)
+    func tweet(text: String, completion: @escaping (Result<TweetID, Error>) -> Void) {
+        let requestBody = TweetRequestBody(text: text)
+        apiClient.request(TweetRequest(requestBody: requestBody), completion: completion)
     }
     
-    func fetchTweet(_ tweetID: String, completion: @escaping (Result<Tweet, Error>) -> Void) {
+    func fetchTweet(tweetID: String, completion: @escaping (Result<Tweet, Error>) -> Void) {
         apiClient.request(FetchTweetRequest(tweetID: tweetID), completion: completion)
     }
     
