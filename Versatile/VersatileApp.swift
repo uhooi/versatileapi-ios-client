@@ -11,7 +11,7 @@ import SwiftUI
 struct VersatileApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            UserView(viewModel: UserViewModel())
         }
     }
 }
