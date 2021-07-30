@@ -64,11 +64,7 @@ final class APIClient {
                 completion(.failure(error))
                 return
             }
-            guard let response = response as? HTTPURLResponse else {
-                completion(.failure(RequestError.invalidResponse))
-                return
-            }
-            if let requestError = self.validateStatusCode(response.statusCode) {
+            if let requestError = self.validateResponse(response) {
                 completion(.failure(requestError))
                 return
             }
@@ -87,6 +83,16 @@ final class APIClient {
                 return
             }
         }.resume()
+    }
+    
+    private func validateResponse( _ response: URLResponse?) -> RequestError? {
+        guard let response = response as? HTTPURLResponse else {
+            return .invalidResponse
+        }
+        if let requestError = self.validateStatusCode(response.statusCode) {
+            return requestError
+        }
+        return nil
     }
     
     private func validateStatusCode(_ statusCode: Int) -> RequestError? {
