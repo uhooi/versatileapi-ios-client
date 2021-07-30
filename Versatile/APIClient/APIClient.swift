@@ -149,7 +149,9 @@ final class APIClient {
     
     private func validateStatusCode(_ statusCode: Int) -> RequestError? {
         switch statusCode {
-        case 200..<300:
+        case 100..<200: // Informational
+            return nil
+        case 200..<300: // Success
             return nil
         case 300..<400:
             return .redirection(statusCode)
