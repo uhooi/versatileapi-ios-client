@@ -22,11 +22,25 @@ final class APIClient {
     // MARK: Other Internal Methods
     
     func request<T: Request>(_ requestContents: T, completion: @escaping (Result<T.ResponseBody, Error>) -> Void) {
+        var request: URLRequest
+        do {
+            request = try createRequest(requestContents)
+        } catch let error {
+            completion(.failure(error))
+            return
+        }
+        request.httpBody = requestContents.requestBody?.toJSONData()
+        
+        self.request(requestContents, request: request, completion: completion)
+    }
+    
+    // MARK: Other Private Methods
+    
+    private func createRequest<T: Request>(_ requestContents: T) throws -> URLRequest {
         guard let url = URL(string: baseURLString + requestContents.path),
               var components = URLComponents(url: url, resolvingAgainstBaseURL: url.baseURL != nil)
         else {
-            completion(.failure(RequestError.invalidUrl))
-            return
+            throw RequestError.invalidUrl
         }
         
         if let queryItems = requestContents.queryItems {
@@ -40,8 +54,11 @@ final class APIClient {
                 request.addValue(value, forHTTPHeaderField: field.rawValue)
             }
         }
-        request.httpBody = requestContents.requestBody?.toJSONData()
         
+        return request
+    }
+    
+    private func request<T: Request>(_ requestContents: T, request: URLRequest, completion: @escaping (Result<T.ResponseBody, Error>) -> Void) {
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(.failure(error))
@@ -51,20 +68,8 @@ final class APIClient {
                 completion(.failure(RequestError.invalidResponse))
                 return
             }
-            switch response.statusCode {
-            case 200..<300:
-                break
-            case 300..<400:
-                completion(.failure(RequestError.redirection))
-                return
-            case 400..<500:
-                completion(.failure(RequestError.clientError(response.statusCode)))
-                return
-            case 500..<600:
-                completion(.failure(RequestError.serverError(response.statusCode)))
-                return
-            default:
-                completion(.failure(RequestError.invalidStatusCode(response.statusCode)))
+            if let requestError = self.validateStatusCode(response.statusCode) {
+                completion(.failure(requestError))
                 return
             }
             guard let data = data else {
@@ -83,14 +88,29 @@ final class APIClient {
             }
         }.resume()
     }
+    
+    private func validateStatusCode(_ statusCode: Int) -> RequestError? {
+        switch statusCode {
+        case 200..<300:
+            return nil
+        case 300..<400:
+            return .redirection(statusCode)
+        case 400..<500:
+            return .clientError(statusCode)
+        case 500..<600:
+            return .serverError(statusCode)
+        default:
+            return .invalidStatusCode(statusCode)
+        }
+    }
 }
 
 enum RequestError: Error {
     case invalidUrl
     case invalidData
     case invalidResponse
+    case redirection(_ statusCode: Int)
     case clientError(_ statusCode: Int)
     case serverError(_ statusCode: Int)
     case invalidStatusCode(_ statusCode: Int)
-    case redirection
 }
