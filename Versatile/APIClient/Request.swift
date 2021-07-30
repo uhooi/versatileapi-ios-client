@@ -13,13 +13,11 @@ protocol Request {
     var httpMethod: HTTPMethod { get }
     var queryItems: [URLQueryItem]? { get }
     var httpHeaders: [HTTPHeaderField: String]? { get }
-    var requestBody: Encodable? { get }
 }
 
 extension Request {
     var queryItems: [URLQueryItem]? { nil }
     var httpHeaders: [HTTPHeaderField: String]? { nil }
-    var requestBody: Encodable? { nil }
 }
 
 enum HTTPMethod: String {

@@ -23,7 +23,6 @@
 		79804F8E26B2E83D002C375F /* TweetRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79804F8D26B2E83D002C375F /* TweetRequestBody.swift */; };
 		79F24DE526AD38A400ACDBE2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F24DE426AD38A400ACDBE2 /* Request.swift */; };
 		79F24DEA26AD594200ACDBE2 /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F24DE926AD594200ACDBE2 /* RegisterUserRequest.swift */; };
-		79F24DED26AD6AC300ACDBE2 /* Encodable+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F24DEC26AD6AC300ACDBE2 /* Encodable+Data.swift */; };
 		79F24DEF26AD6E3A00ACDBE2 /* UpdateUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F24DEE26AD6E3A00ACDBE2 /* UpdateUserRequest.swift */; };
 		79F24DF126AD6EE800ACDBE2 /* UserID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F24DF026AD6EE800ACDBE2 /* UserID.swift */; };
 		79F24DF426AD72D800ACDBE2 /* FetchUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F24DF326AD72D800ACDBE2 /* FetchUserRequest.swift */; };
@@ -82,7 +81,6 @@
 		79804F8D26B2E83D002C375F /* TweetRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRequestBody.swift; sourceTree = "<group>"; };
 		79F24DE426AD38A400ACDBE2 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		79F24DE926AD594200ACDBE2 /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
-		79F24DEC26AD6AC300ACDBE2 /* Encodable+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Data.swift"; sourceTree = "<group>"; };
 		79F24DEE26AD6E3A00ACDBE2 /* UpdateUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserRequest.swift; sourceTree = "<group>"; };
 		79F24DF026AD6EE800ACDBE2 /* UserID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserID.swift; sourceTree = "<group>"; };
 		79F24DF326AD72D800ACDBE2 /* FetchUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserRequest.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 				7919CAFE26A8451C00B20043 /* Models */,
 				7919CB0326A84F2000B20043 /* Repositories */,
 				79F24DE626AD524C00ACDBE2 /* APIClient */,
-				79F24DEB26AD6A8F00ACDBE2 /* Extensions */,
 				79D4E50A26A7D9CF00279F1B /* Resources */,
 				797E6A9726A7D8BD00C0DC78 /* Preview Content */,
 			);
@@ -317,14 +314,6 @@
 				79804F9226B2E9BF002C375F /* FetchAllTweet */,
 			);
 			path = Requests;
-			sourceTree = "<group>";
-		};
-		79F24DEB26AD6A8F00ACDBE2 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				79F24DEC26AD6AC300ACDBE2 /* Encodable+Data.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		79F24E0426AD82CF00ACDBE2 /* VersatileIntegrationTests */ = {
@@ -506,7 +495,6 @@
 				79804F8E26B2E83D002C375F /* TweetRequestBody.swift in Sources */,
 				797E6A9226A7D8BC00C0DC78 /* VersatileApp.swift in Sources */,
 				7919CB0026A8453B00B20043 /* User.swift in Sources */,
-				79F24DED26AD6AC300ACDBE2 /* Encodable+Data.swift in Sources */,
 				79F24DEF26AD6E3A00ACDBE2 /* UpdateUserRequest.swift in Sources */,
 				79F24DF126AD6EE800ACDBE2 /* UserID.swift in Sources */,
 				79F24DF826AD776D00ACDBE2 /* TweetRequest.swift in Sources */,

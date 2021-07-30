@@ -14,12 +14,12 @@ final class VersatileAPIClient {
 extension VersatileAPIClient: VersatileRepository {
     func registerUser(name: String, description: String, completion: @escaping (Result<UserID, Error>) -> Void) {
         let requestBody = RegisterUserRequestBody(name: name, description: description)
-        apiClient.request(RegisterUserRequest(requestBody: requestBody), completion: completion)
+        apiClient.request(RegisterUserRequest(), requestBody: requestBody, completion: completion)
     }
     
     func updateUser(name: String, description: String, completion: @escaping (Result<UserID, Error>) -> Void) {
         let requestBody = UpdateUserRequestBody(name: name, description: description)
-        apiClient.request(UpdateUserRequest(requestBody: requestBody), completion: completion)
+        apiClient.request(UpdateUserRequest(), requestBody: requestBody, completion: completion)
     }
     
     func fetchUser(userID: String, completion: @escaping (Result<User, Error>) -> Void) {
@@ -32,7 +32,7 @@ extension VersatileAPIClient: VersatileRepository {
     
     func tweet(text: String, completion: @escaping (Result<TweetID, Error>) -> Void) {
         let requestBody = TweetRequestBody(text: text)
-        apiClient.request(TweetRequest(requestBody: requestBody), completion: completion)
+        apiClient.request(TweetRequest(), requestBody: requestBody, completion: completion)
     }
     
     func fetchTweet(tweetID: String, completion: @escaping (Result<Tweet, Error>) -> Void) {
