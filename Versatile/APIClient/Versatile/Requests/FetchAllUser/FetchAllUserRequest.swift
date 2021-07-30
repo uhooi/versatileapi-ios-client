@@ -7,7 +7,7 @@
 
 struct FetchAllUserRequest: Request {
     typealias ResponseBody = [User]
-    var path: String { "user/user/all" }
+    var path: String { "user/all" }
     var httpMethod: HTTPMethod { .get }
     var httpHeaders: [HTTPHeaderField: String]? { [.contentType: ContentType.applicationJson.rawValue] }
 }
