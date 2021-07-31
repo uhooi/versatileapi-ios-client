@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Foundation
 
 final class TimelineViewModel: ObservableObject, Identifiable {
     
@@ -20,7 +21,9 @@ final class TimelineViewModel: ObservableObject, Identifiable {
         apiClient.fetchAllTweet { result in
             switch result {
             case .success(let tweets):
-                self.tweets = tweets
+                DispatchQueue.main.async {
+                    self.tweets = tweets
+                }
             case .failure:
                 // TODO: 失敗通知
                 break

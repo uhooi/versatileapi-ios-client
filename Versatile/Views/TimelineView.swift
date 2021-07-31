@@ -9,19 +9,28 @@ import SwiftUI
 
 struct TimelineView: View {
     @ObservedObject var viewModel: TimelineViewModel
+    @ObservedObject var tweetViewModel: TweetViewModel
     
     init(viewModel: TimelineViewModel) {
         self.viewModel = viewModel
+        self.tweetViewModel = TweetViewModel(apiClient: VersatileAPIClientMock())
     }
     
     var body: some View {
-        ScrollView {
-            ForEach(viewModel.tweets, content: TimelineRow.init(tweet:))
+        VStack {
+            ScrollView {
+                ForEach(viewModel.tweets, content: TimelineRow.init(tweet:))
+            }
+            HStack {
+                Spacer()
+                Button("つぶやく", action: {
+                    tweetViewModel.isPresented = true
+                })
+            }
         }
-        HStack {
-            Spacer()
-            Button("つぶやく", action: {})
-        }
+        .sheet(isPresented: $tweetViewModel.isPresented, content: {
+            TweetView(viewModel: tweetViewModel)
+        })
     }
 }
 

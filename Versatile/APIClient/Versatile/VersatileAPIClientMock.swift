@@ -68,6 +68,8 @@ extension VersatileAPIClientMock: VersatileRepository {
     }
     
     func tweet(text: String, completion: @escaping (Result<TweetID, Error>) -> Void) {
+        print("tweet \(text)")
+        completion(.success(TweetID(id: "test")))
     }
     
     func fetchTweet(tweetID: String, completion: @escaping (Result<Tweet, Error>) -> Void) {
