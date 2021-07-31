@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "HTTPClient",
+        "repositoryURL": "https://github.com/uhooi/swift-http-client",
+        "state": {
+          "branch": null,
+          "revision": "8cebc178c8b1b7a6f08571b39fd1802b4c3a32dc",
+          "version": "0.1.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -5,6 +5,8 @@
 //  Created by uhooi on 2021/07/25.
 //
 
+import HTTPClient
+
 struct TweetRequest: Request {
     typealias ResponseBody = TweetID
     var path: String { "text" }
