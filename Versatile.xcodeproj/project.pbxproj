@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		7919CB0526A84F6600B20043 /* VersatileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919CB0426A84F6600B20043 /* VersatileRepository.swift */; };
 		7919CB0726A84FCA00B20043 /* VersatileAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919CB0626A84FCA00B20043 /* VersatileAPIClient.swift */; };
 		7919CB0926A8519D00B20043 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919CB0826A8519D00B20043 /* APIClient.swift */; };
+		795A5CE426B595EA00BF5AF4 /* HTTPClient in Frameworks */ = {isa = PBXBuildFile; productRef = 795A5CE326B595EA00BF5AF4 /* HTTPClient */; };
 		797E6A9226A7D8BC00C0DC78 /* VersatileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E6A9126A7D8BC00C0DC78 /* VersatileApp.swift */; };
 		797E6A9626A7D8BD00C0DC78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 797E6A9526A7D8BD00C0DC78 /* Assets.xcassets */; };
 		797E6A9926A7D8BD00C0DC78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 797E6A9826A7D8BD00C0DC78 /* Preview Assets.xcassets */; };
@@ -109,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				795A5CE426B595EA00BF5AF4 /* HTTPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +366,9 @@
 			dependencies = (
 			);
 			name = Versatile;
+			packageProductDependencies = (
+				795A5CE326B595EA00BF5AF4 /* HTTPClient */,
+			);
 			productName = Versatile;
 			productReference = 797E6A8E26A7D8BC00C0DC78 /* Versatile.app */;
 			productType = "com.apple.product-type.application";
@@ -457,6 +462,9 @@
 				Base,
 			);
 			mainGroup = 797E6A8526A7D8BC00C0DC78;
+			packageReferences = (
+				795A5CE226B595EA00BF5AF4 /* XCRemoteSwiftPackageReference "swift-http-client" */,
+			);
 			productRefGroup = 797E6A8F26A7D8BC00C0DC78 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -905,6 +913,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		795A5CE226B595EA00BF5AF4 /* XCRemoteSwiftPackageReference "swift-http-client" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uhooi/swift-http-client";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		795A5CE326B595EA00BF5AF4 /* HTTPClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 795A5CE226B595EA00BF5AF4 /* XCRemoteSwiftPackageReference "swift-http-client" */;
+			productName = HTTPClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 797E6A8626A7D8BC00C0DC78 /* Project object */;
 }
