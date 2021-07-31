@@ -74,7 +74,9 @@ extension VersatileAPIClientMock: VersatileRepository {
     }
     
     func fetchAllTweet(_ completion: @escaping (Result<[Tweet], Error>) -> Void) {
-        completion(.success(tweets))
+        VersatileAPIClient.shared.fetchAllTweet { result in
+            completion(result)
+        }
     }
     
 }
