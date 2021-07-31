@@ -19,7 +19,7 @@ final class UserViewModel: ObservableObject, Identifiable {
     
     init(apiClient: VersatileRepository) {
         buttonTapped.sink(receiveValue: { _ in
-            apiClient.registerUser(User(id: nil, name: self.name, description: self.description)) { result in
+            apiClient.registerUser(name: self.name, description: self.description) { result in
                 switch result {
                 case .success:
                     // TODO: Idをローカルに保存

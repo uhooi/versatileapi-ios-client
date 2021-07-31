@@ -28,5 +28,3 @@ final class TimelineViewModel: ObservableObject, Identifiable {
         }
     }
 }
-
-extension Tweet: Identifiable {}

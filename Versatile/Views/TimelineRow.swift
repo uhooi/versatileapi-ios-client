@@ -21,7 +21,7 @@ struct TimelineRow: View {
 
 struct TimelineRow_Previews: PreviewProvider {
     static var previews: some View {
-        TimelineRow(tweet: Tweet(id: "001", text: "暇なう", in_reply_to_user_id: nil, in_reply_to_text_id: nil))
+        TimelineRow(tweet: Tweet(id: "001", text: "暇なう", inReplyToUserId: nil, inReplyToTextId: nil))
             .previewLayout(.sizeThatFits)
     }
 }
