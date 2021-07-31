@@ -5,6 +5,8 @@
 //  Created by uhooi on 2021/07/25.
 //
 
+import HTTPClient
+
 struct UpdateUserRequest: Request {
     typealias ResponseBody = UserID
     var path: String { "user/create_user" }
