@@ -33,30 +33,31 @@ final class VersatileAPIClientTests: XCTestCase {
     func test_user() {
         let expectation = expectation(description: "User")
         XCTContext.runActivity(named: "Register") { _ in
-            let uhooi = User(id: nil, name: "uhooi", description: "green monster.")
-            versatileAPIClient.registerUser(uhooi) { registerUserResult in
+            let uhooiName = "uhooi"
+            let uhooiDescription = "green monster."
+            versatileAPIClient.registerUser(name: uhooiName, description: uhooiDescription) { registerUserResult in
                 switch registerUserResult {
                 case let .success(registeredUserID):
                     XCTContext.runActivity(named: "Fetch") { _ in
-                        self.versatileAPIClient.fetchUser(registeredUserID.id) { fetchUserResult in
+                        self.versatileAPIClient.fetchUser(userID: registeredUserID.id) { fetchUserResult in
                             switch fetchUserResult {
                             case let .success(fetchedUser):
                                 XCTAssertEqual(fetchedUser.id, registeredUserID.id)
-                                XCTAssertEqual(fetchedUser.name, uhooi.name)
-                                XCTAssertEqual(fetchedUser.description, uhooi.description)
+                                XCTAssertEqual(fetchedUser.name, uhooiName)
+                                XCTAssertEqual(fetchedUser.description, uhooiDescription)
                                 XCTContext.runActivity(named: "Update") { _ in
-                                    let updatedUhooi = User(id: nil, name: uhooi.name, description: "yellow monster.")
-                                    self.versatileAPIClient.updateUser(updatedUhooi) { updateUserResult in
+                                    let updatedUhooiDescription = "yellow monster."
+                                    self.versatileAPIClient.updateUser(name: uhooiName, description: updatedUhooiDescription) { updateUserResult in
                                         switch updateUserResult {
                                         case let .success(updatedUserID):
                                             XCTAssertEqual(updatedUserID, registeredUserID)
                                             XCTContext.runActivity(named: "Refetch") { _ in
-                                                self.versatileAPIClient.fetchUser(updatedUserID.id) { refetchUserResult in
+                                                self.versatileAPIClient.fetchUser(userID: updatedUserID.id) { refetchUserResult in
                                                     switch refetchUserResult {
                                                     case let .success(refetchedUser):
-                                                        XCTAssertEqual(refetchedUser.id, updatedUhooi.id)
-                                                        XCTAssertEqual(refetchedUser.name, updatedUhooi.name)
-                                                        XCTAssertEqual(refetchedUser.description, updatedUhooi.description)
+                                                        XCTAssertEqual(refetchedUser.id, updatedUserID.id)
+                                                        XCTAssertEqual(refetchedUser.name, uhooiName)
+                                                        XCTAssertEqual(refetchedUser.description, updatedUhooiDescription)
                                                         expectation.fulfill()
                                                     case let .failure(error):
                                                         XCTFail("Error: \(error)")

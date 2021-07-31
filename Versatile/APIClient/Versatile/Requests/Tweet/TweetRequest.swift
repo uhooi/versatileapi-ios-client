@@ -13,7 +13,6 @@ struct TweetRequest: Request {
         .contentType: ContentType.applicationJson.rawValue,
         .authorization: TweetRequest.authorization
     ] }
-    let requestBody: Tweet
     
     private static let authorization = "HelloWorld"
 }
