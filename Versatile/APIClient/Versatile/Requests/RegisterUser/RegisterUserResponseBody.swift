@@ -10,5 +10,5 @@ struct RegisterUserResponseBody: Decodable {
 }
 
 extension RegisterUserResponseBody {
-    func convertUserID() -> UserID { .init(id: self.id) }
+    func convertToUserID() -> UserID { .init(id: self.id) }
 }

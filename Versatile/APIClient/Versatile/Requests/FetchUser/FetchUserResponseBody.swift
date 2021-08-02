@@ -12,5 +12,5 @@ struct FetchUserResponseBody: Decodable {
 }
 
 extension FetchUserResponseBody {
-    func convertUser() -> User { .init(id: self.id, name: self.name, description: self.description) }
+    func convertToUser() -> User { .init(id: self.id, name: self.name, description: self.description) }
 }

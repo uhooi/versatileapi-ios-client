@@ -10,5 +10,5 @@ struct TweetResponseBody: Decodable {
 }
 
 extension TweetResponseBody {
-    func convertTweetID() -> TweetID { .init(id: self.id) }
+    func convertToTweetID() -> TweetID { .init(id: self.id) }
 }
