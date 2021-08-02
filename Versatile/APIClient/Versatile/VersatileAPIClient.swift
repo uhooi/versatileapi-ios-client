@@ -19,7 +19,7 @@ extension VersatileAPIClient: VersatileRepository {
         httpClient.request(RegisterUserRequest(), requestBody: requestBody) { result in
             switch result {
             case let .success(responseBody):
-                completion(.success(responseBody.convertUserID()))
+                completion(.success(responseBody.convertToUserID()))
             case let .failure(error):
                 completion(.failure(error))
             }
@@ -31,7 +31,7 @@ extension VersatileAPIClient: VersatileRepository {
         httpClient.request(UpdateUserRequest(), requestBody: requestBody) { result in
             switch result {
             case let .success(responseBody):
-                completion(.success(responseBody.convertUserID()))
+                completion(.success(responseBody.convertToUserID()))
             case let .failure(error):
                 completion(.failure(error))
             }
@@ -42,7 +42,7 @@ extension VersatileAPIClient: VersatileRepository {
         httpClient.request(FetchUserRequest(userID: userID)) { result in
             switch result {
             case let .success(responseBody):
-                completion(.success(responseBody.convertUser()))
+                completion(.success(responseBody.convertToUser()))
             case let .failure(error):
                 completion(.failure(error))
             }
@@ -53,7 +53,7 @@ extension VersatileAPIClient: VersatileRepository {
         httpClient.request(FetchAllUserRequest()) { result in
             switch result {
             case let .success(responseBody):
-                completion(.success(responseBody.map { $0.convertUser() }))
+                completion(.success(responseBody.map { $0.convertToUser() }))
             case let .failure(error):
                 completion(.failure(error))
             }
@@ -65,7 +65,7 @@ extension VersatileAPIClient: VersatileRepository {
         httpClient.request(TweetRequest(), requestBody: requestBody) { result in
             switch result {
             case let .success(responseBody):
-                completion(.success(responseBody.convertTweetID()))
+                completion(.success(responseBody.convertToTweetID()))
             case let .failure(error):
                 completion(.failure(error))
             }
@@ -76,7 +76,7 @@ extension VersatileAPIClient: VersatileRepository {
         httpClient.request(FetchTweetRequest(tweetID: tweetID)) { result in
             switch result {
             case let .success(responseBody):
-                completion(.success(responseBody.convertTweet()))
+                completion(.success(responseBody.convertToTweet()))
             case let .failure(error):
                 completion(.failure(error))
             }
@@ -87,7 +87,7 @@ extension VersatileAPIClient: VersatileRepository {
         httpClient.request(FetchAllTweetRequest()) { result in
             switch result {
             case let .success(responseBody):
-                completion(.success(responseBody.map { $0.convertTweet() }))
+                completion(.success(responseBody.map { $0.convertToTweet() }))
             case let .failure(error):
                 completion(.failure(error))
             }

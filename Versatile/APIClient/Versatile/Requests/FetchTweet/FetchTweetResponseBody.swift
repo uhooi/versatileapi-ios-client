@@ -13,5 +13,5 @@ struct FetchTweetResponseBody: Decodable {
 }
 
 extension FetchTweetResponseBody {
-    func convertTweet() -> Tweet { .init(id: self.id, text: self.text, inReplyToUserId: self.inReplyToUserId, inReplyToTextId: self.inReplyToTextId) }
+    func convertToTweet() -> Tweet { .init(id: self.id, text: self.text, inReplyToUserId: self.inReplyToUserId, inReplyToTextId: self.inReplyToTextId) }
 }
