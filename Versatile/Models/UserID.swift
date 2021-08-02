@@ -5,6 +5,6 @@
 //  Created by uhooi on 2021/07/25.
 //
 
-struct UserID: Decodable, Identifiable, Equatable {
+struct UserID: Identifiable, Equatable {
     let id: String
 }

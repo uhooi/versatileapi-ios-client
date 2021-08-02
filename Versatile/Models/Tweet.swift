@@ -5,7 +5,7 @@
 //  Created by uhooi on 2021/07/21.
 //
 
-struct Tweet: Decodable, Identifiable {
+struct Tweet: Identifiable {
     let id: String
     let text: String
     let inReplyToUserId: String?
