@@ -8,7 +8,7 @@
 import HTTPClient
 
 struct RegisterUserRequest: Request {
-    typealias ResponseBody = UserID
+    typealias ResponseBody = RegisterUserResponseBody
     var path: String { "user/create_user" }
     var httpMethod: HTTPMethod { .post }
     var httpHeaders: [HTTPHeaderField: String]? { [.contentType: ContentType.applicationJson.rawValue] }

@@ -8,7 +8,7 @@
 import HTTPClient
 
 struct FetchAllTweetRequest: Request {
-    typealias ResponseBody = [Tweet]
+    typealias ResponseBody = [FetchAllTweetResponseBody]
     var path: String { "text/all" }
     var httpMethod: HTTPMethod { .get }
     var httpHeaders: [HTTPHeaderField: String]? { [.contentType: ContentType.applicationJson.rawValue] }

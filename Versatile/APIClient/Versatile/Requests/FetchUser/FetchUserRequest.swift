@@ -8,7 +8,7 @@
 import HTTPClient
 
 struct FetchUserRequest: Request {
-    typealias ResponseBody = User
+    typealias ResponseBody = FetchUserResponseBody
     var path: String { "user/\(userID)" }
     var httpMethod: HTTPMethod { .get }
     var httpHeaders: [HTTPHeaderField: String]? { [.contentType: ContentType.applicationJson.rawValue] }

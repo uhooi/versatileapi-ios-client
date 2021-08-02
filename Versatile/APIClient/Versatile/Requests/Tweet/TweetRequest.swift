@@ -8,7 +8,7 @@
 import HTTPClient
 
 struct TweetRequest: Request {
-    typealias ResponseBody = TweetID
+    typealias ResponseBody = TweetResponseBody
     var path: String { "text" }
     var httpMethod: HTTPMethod { .post }
     var httpHeaders: [HTTPHeaderField: String]? { [
