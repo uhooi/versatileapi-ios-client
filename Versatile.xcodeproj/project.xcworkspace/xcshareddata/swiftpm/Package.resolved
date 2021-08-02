@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/uhooi/swift-http-client",
         "state": {
           "branch": null,
-          "revision": "8cebc178c8b1b7a6f08571b39fd1802b4c3a32dc",
-          "version": "0.1.1"
+          "revision": "c27a4e600b257b9947943f388e1f0c6ffd4a755b",
+          "version": "0.3.0"
         }
       }
     ]
